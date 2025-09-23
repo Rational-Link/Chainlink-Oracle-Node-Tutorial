@@ -59,7 +59,7 @@ In the `chainlink-volume` folder, edit the `.api` file to contain your login cre
 
 
 3. **Modify `config.toml` file**
-In the chainlink-volume folder, update the config.toml file to match the appropriate ChainID (e.g., 11155111 for Ethereum Sepolia). Replace the WSURL and HTTPURL values with the endpoints provided by your Infura account. Below is an example configuration for Ethereum Sepolia:
+In the `chainlink-volume` folder, update the config.toml file to match the appropriate ChainID (e.g., 11155111 for Ethereum Sepolia). Replace the WSURL and HTTPURL values with the endpoints provided by your Infura account. Below is an example configuration for Ethereum Sepolia:
 
     ```toml
     [Log]
@@ -83,7 +83,7 @@ In the chainlink-volume folder, update the config.toml file to match the appropr
 
 
 4. **Modify `secret.toml` file**
-In the chainlink-volume folder, update the keystore secret key if necessary. This key serves as the wallet password used to unlock the generated keystore file. Also, update the database URL to ensure that the mysecretpassword and chainlink-sepolia values match the credentials and database name you set in step 1 for the PostgreSQL instance.
+In the `chainlink-volume` folder, update the keystore secret key if necessary. This key serves as the wallet password used to unlock the generated keystore file. Also, update the database URL to ensure that the mysecretpassword and chainlink-sepolia values match the credentials and database name you set in step 1 for the PostgreSQL instance.
 
     ```toml
     [Password]
@@ -94,7 +94,7 @@ In the chainlink-volume folder, update the keystore secret key if necessary. Thi
 
 
 5. **Run Docker instances**
-In the same directory, the setup is automated using the docker-compose.yml file. This file defines two services
+From one directory above the `chainlink-volume` folder, the setup is automated using the `docker-compose.yml` file. This file defines two services
     - chainlink_db: Runs a PostgreSQL database with environment variables from database.env, stores data locally, and includes a health check.
     - chainlink: Runs the Chainlink node (v2.26.0) after the database is healthy, using configs and secrets from mounted volumes, exposing port 6688, and connecting to the host network.
     It essentially provisions a ready-to-run Chainlink node with a persistent Postgres backend. Run the following syntax in Bash to run docker instances.
@@ -103,7 +103,7 @@ In the same directory, the setup is automated using the docker-compose.yml file.
     docker compose up
     ```
     - Open `http://localhost:6688` in your browser to access the Chainlink node login page.
-    - Sign in using the credentials from your .api file.
+    - Sign in using the credentials from your `.api` file.
     - To find your account address, click the Configuration tab in the top‑right corner and look for the ACCOUNT_ADDRESS value.
     - Fund your address with test LINK and ETH/POL by copying the account address and visiting the [Chainlink Faucet](https://faucets.chain.link/) .
 
