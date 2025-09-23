@@ -16,8 +16,6 @@ services:
   chainlink:
     image: "smartcontract/chainlink:2.26.0"
     platform: linux/x86_64
-    env_file:
-      - .env
     depends_on:
       chainlink_db:
         condition: service_healthy
