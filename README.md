@@ -97,7 +97,7 @@ In the chainlink-volume folder, update the keystore secret key if necessary. Thi
 In the same directory, the setup is automated using the docker-compose.yml file. This file defines two services
     - chainlink_db: Runs a PostgreSQL database with environment variables from database.env, stores data locally, and includes a health check.
     - chainlink: Runs the Chainlink node (v2.26.0) after the database is healthy, using configs and secrets from mounted volumes, exposing port 6688, and connecting to the host network.
-    It essentially provisions a ready-to-run Chainlink node with a persistent Postgres backend.
+    It essentially provisions a ready-to-run Chainlink node with a persistent Postgres backend. Run the following syntax in Bash to run docker instances.
 
     ```bash
     docker compose up
