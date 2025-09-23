@@ -50,6 +50,7 @@ These will be used to connect your Chainlink node to the blockchain via RPC.
 
 
 2. **Modify `.api` file for Oracle Node authentication**
+
   In the `chainlink-volume` folder, edit the `.api` file to contain your login credentials for the Oracle Node: These details serve as the login username and password for the Oracle Node. They are required only during the initial creation of the PostgreSQL database instance but will remain valid for its entire lifecycle. The email must contain an @ symbol, and the password must be between 16 and 50 characters long.
  
     ```api
@@ -59,6 +60,7 @@ These will be used to connect your Chainlink node to the blockchain via RPC.
 
 
 3. **Modify `config.toml` file**
+
   In the `chainlink-volume` folder, update the config.toml file to match the appropriate ChainID (e.g., 11155111 for Ethereum Sepolia). Replace the WSURL and HTTPURL values with the endpoints provided by your Infura account. Below is an example configuration for Ethereum Sepolia:
 
     ```toml
@@ -83,6 +85,7 @@ These will be used to connect your Chainlink node to the blockchain via RPC.
 
 
 4. **Modify `secret.toml` file**
+
   In the `chainlink-volume` folder, update the keystore secret key if necessary. This key serves as the wallet password used to unlock the generated keystore file. Also, update the database URL to ensure that the mysecretpassword and chainlink-sepolia values match the credentials and database name you set in step 1 for the PostgreSQL instance.
 
     ```toml
@@ -94,6 +97,7 @@ These will be used to connect your Chainlink node to the blockchain via RPC.
 
 
 5. **Run Docker instances**
+
   From one directory above the `chainlink-volume` folder, the setup is automated using the `docker-compose.yml` file. This file defines two services
     - chainlink_db: Runs a PostgreSQL database with environment variables from database.env, stores data locally, and includes a health check.
     - chainlink: Runs the Chainlink node (v2.26.0) after the database is healthy, using configs and secrets from mounted volumes, exposing port 6688, and connecting to the host network.
@@ -109,6 +113,7 @@ These will be used to connect your Chainlink node to the blockchain via RPC.
 
 
 ## References
+
   The work contained in this directory is based on the official instructions provided in the [Chainlink Nodes documentation](https://docs.chain.link/chainlink-nodes).  
   It follows the recommended setup and configuration steps for running a Chainlink node, adapted with network‑specific examples for Ethereum Sepolia, Arbitrum Sepolia, and Polygon Amoy.  
   All configurations, environment variables, and deployment processes have been aligned with the guidelines outlined in the documentation to ensure compatibility and best practices.
