@@ -107,3 +107,9 @@ In the same directory, the setup is automated using the docker-compose.yml file.
   - To find your account address, click the Configuration tab in the top‑right corner and look for the ACCOUNT_ADDRESS value.
   - Fund your address with test LINK and ETH/POL by copying the account address and visiting the [Chainlink Faucet](https://faucets.chain.link/) .
 
+
+## References
+
+The work contained in this directory is based on the official instructions provided in the [Chainlink Nodes documentation](https://docs.chain.link/chainlink-nodes).  
+It follows the recommended setup and configuration steps for running a Chainlink node, adapted with network‑specific examples for Ethereum Sepolia, Arbitrum Sepolia, and Polygon Amoy.  
+All configurations, environment variables, and deployment processes have been aligned with the guidelines outlined in the documentation to ensure compatibility and best practices.
