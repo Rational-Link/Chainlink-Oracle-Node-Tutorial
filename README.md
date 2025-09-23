@@ -95,15 +95,15 @@ In the chainlink-volume folder, update the keystore secret key if necessary. Thi
 
 5. **Run Docker instances**
 In the same directory, the setup is automated using the docker-compose.yml file. This file defines two services
-- chainlink_db: Runs a PostgreSQL database with environment variables from database.env, stores data locally, and includes a health check.
-- chainlink: Runs the Chainlink node (v2.26.0) after the database is healthy, using configs and secrets from mounted volumes, exposing port 6688, and connecting to the host network.
-It essentially provisions a ready-to-run Chainlink node with a persistent Postgres backend.
+  - chainlink_db: Runs a PostgreSQL database with environment variables from database.env, stores data locally, and includes a health check.
+  - chainlink: Runs the Chainlink node (v2.26.0) after the database is healthy, using configs and secrets from mounted volumes, exposing port 6688, and connecting to the host network.
+  It essentially provisions a ready-to-run Chainlink node with a persistent Postgres backend.
 
-    ```bash
-    docker compose up
-    ```
-- Open `http://localhost:6688` in your browser to access the Chainlink node login page.
-- Sign in using the credentials from your .api file.
-- To find your account address, click the Configuration tab in the top‑right corner and look for the ACCOUNT_ADDRESS value.
-- Fund your address with test LINK and ETH/POL by copying the account address and visiting the [Chainlink Faucet](https://faucets.chain.link/) .
+      ```bash
+      docker compose up
+      ```
+  - Open `http://localhost:6688` in your browser to access the Chainlink node login page.
+  - Sign in using the credentials from your .api file.
+  - To find your account address, click the Configuration tab in the top‑right corner and look for the ACCOUNT_ADDRESS value.
+  - Fund your address with test LINK and ETH/POL by copying the account address and visiting the [Chainlink Faucet](https://faucets.chain.link/) .
 
