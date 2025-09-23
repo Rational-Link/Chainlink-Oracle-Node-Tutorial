@@ -116,6 +116,6 @@ These will be used to connect your Chainlink node to the blockchain via RPC.
 
 ## References
 
-  The work contained in this directory is based on the official instructions provided in the [Chainlink Nodes documentation](https://docs.chain.link/chainlink-nodes).  
+  The work contained in this repository is based on the official instructions provided in the [Chainlink Nodes documentation](https://docs.chain.link/chainlink-nodes).  
   It follows the recommended setup and configuration steps for running a Chainlink node, adapted with network‑specific examples for Ethereum Sepolia, Arbitrum Sepolia, and Polygon Amoy.  
   All configurations, environment variables, and deployment processes have been aligned with the guidelines outlined in the documentation to ensure compatibility and best practices.
