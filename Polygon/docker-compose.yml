@@ -1,0 +1,35 @@
+services:
+  chainlink_db:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    env_file:
+      - database.env
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  chainlink:
+    image: "smartcontract/chainlink:2.26.0"
+    platform: linux/x86_64
+    env_file:
+      - .env
+    depends_on:
+      chainlink_db:
+        condition: service_healthy
+
+    ports:
+      - "6688:6688"
+    volumes:
+      - ./chainlink-volume:/chainlink
+    command: >
+      node -config /chainlink/config.toml -secrets /chainlink/secrets.toml start --api /chainlink/.api
+    extra_hosts:  
+      - "host.docker.internal:host-gateway"
+
+    stdin_open: true
+    tty: true

@@ -1,0 +1,20 @@
+[Log]
+Level = 'warn'
+
+[WebServer]
+AllowOrigins = '\*'
+SecureCookies = false
+
+[WebServer.TLS]
+HTTPSPort = 0
+
+[[EVM]]
+ChainID = '80002'
+
+[[EVM.Nodes]]
+Name = 'Amoy'
+WSURL = 'wss://polygon-amoy.infura.io/ws/v3/UPDATE_YOUR_API_KEY_Infura'
+HTTPURL = 'https://polygon-amoy.infura.io/v3/UPDATE_YOUR_API_KEY_Infura'
+
+
+

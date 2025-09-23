@@ -1,0 +1,17 @@
+[Log]
+Level = 'warn'
+
+[WebServer]
+AllowOrigins = '\*'
+SecureCookies = false
+
+[WebServer.TLS]
+HTTPSPort = 0
+
+[[EVM]]
+ChainID = '11155111'
+
+[[EVM.Nodes]]
+Name = 'Sepolia'
+WSURL = 'wss://sepolia.infura.io/ws/v3/UPDATE_YOUR_API_KEY_Infura'
+HTTPURL = 'https://sepolia.infura.io/v3/UPDATE_YOUR_API_KEY_Infura'
