@@ -1,6 +1,42 @@
 # Chainlink Oracle Node Tutorial 
 > Learn about Chainlink by working through basic examples using Ethereum Sepolia, Arbitrum Sepolia, or Polygon Amoy.
 
+## Project Structure
+
+```
+.
+├── Arbitrum
+│   ├── chainlink-volume
+│   │   ├── .api
+│   │   ├── config.toml
+│   │   └── secrets.toml
+│   ├── data
+│   ├── .env
+│   ├── database.env
+│   └── docker-compose.yml
+├── Ethereum
+│   ├── chainlink-volume
+│   │   ├── .api
+│   │   ├── config.toml
+│   │   └── secrets.toml
+│   ├── data
+│   ├── .env
+│   ├── database.env
+│   └── docker-compose.yml
+├── Polygon
+│   ├── chainlink-volume
+│   │   ├── .api
+│   │   ├── config.toml
+│   │   └── secrets.toml
+│   ├── data
+│   ├── .env
+│   ├── database.env
+│   └── docker-compose.yml
+├── LICENSE
+└── README.md
+```
+
+
 ## Deploy a Chainlink Node
 
 ### Run with Docker
