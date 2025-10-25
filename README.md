@@ -5,8 +5,8 @@
 
 ```
 .
-├── Arbitrum
-│   ├── chainlink-volume
+├── Arbitrum/
+│   ├── chainlink-volume/
 │   │   ├── .api
 │   │   ├── config.toml
 │   │   └── secrets.toml
@@ -14,8 +14,8 @@
 │   ├── .env
 │   ├── database.env
 │   └── docker-compose.yml
-├── Ethereum
-│   ├── chainlink-volume
+├── Ethereum/
+│   ├── chainlink-volume/
 │   │   ├── .api
 │   │   ├── config.toml
 │   │   └── secrets.toml
@@ -23,8 +23,8 @@
 │   ├── .env
 │   ├── database.env
 │   └── docker-compose.yml
-├── Polygon
-│   ├── chainlink-volume
+├── Polygon/
+│   ├── chainlink-volume/
 │   │   ├── .api
 │   │   ├── config.toml
 │   │   └── secrets.toml
